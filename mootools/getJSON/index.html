@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+   <title>Plugin last.fm MooTools by Adrian Statescu</title>
+   <link rel="stylesheet" href="http://yui.yahooapis.com/2.8.0r4/build/reset-fonts-grids/reset-fonts-grids.css" type="text/css">
+   <link rel="stylesheet" href="http://yui.yahooapis.com/2.7.0/build/base/base.css" type="text/css">
+   <link rel="Stylesheet" href="page.css" type="text/css" />
+   <link rel="Stylesheet" href="lastfm.css" type="text/css" />
+   <style type="text/css">   </style>
+   <script src="http://www.google.com/jsapi?key=ABQIAAAA1XbMiDxx_BTCY2_FkPh06RRaGTYH6UMl8mADNa0YKuWNNa8VNxQEerTAUcfkyrr6OwBovxn7TDAH5Q"></script>
+   <script type="text/javascript">google.load("mootools", "1.4.1");</script>
+   <script type="text/javascript" src="lastfm.js"></script>
+   <script type="text/javascript">
+           window.addEvent('domready', function(){
+                 $('result').lastfm({username: 'aline_e_b'});
+                 $('result2').lastfm({username: 'thinkphp'});
+           }); 
+   </script>
+</head>
+<body class="yui-skin-sam">
+<div id="doc" class="yui-t7">
+   <div id="hd" role="banner"><h1><b>|</b>Plugin Last.fm MooTools <img src="logo.jpeg" /></h1></div>
+   <div id="bd" role="main">
+   <h2>This plugin will get the recent tracks from a last.fm account and it produces structured HTML with in-build CSS classes for styling.</h2>
+   <div class="yui-g">
+    <p class='recently'>Recently Listened Tracks</p>
+    <div class="yui-u first">
+
+       <div id="result"></div>
+
+    </div>
+    <div class="yui-u">
+
+       <div id="result2"></div>
+	
+    </div>
+<h4>Usage</h4>
+<pre><code>
+window.addEvent('domready', function(){
+     $('result').lastfm({username: 'aline_e_b'});
+     $('result2').lastfm({username: 'thinkphp'});
+}); 
+</code></pre>
+</div>
+
+	</div>
+   <div id="ft" role="contentinfo"><p>Created by @<a href="http://twitter.com/thinkphp">thinkphp</a> | <a href="http://thinkphp.ro/+">google+</a> | download <a href="http://mootools.net/forge/download/lastfm/v1.0">Forge</a></p></div>
+</div>
+</body>
+</html>

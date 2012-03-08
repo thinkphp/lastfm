@@ -1,0 +1,9 @@
+DirectoryIndex tracks.php
+
+# remove trailing slash
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !(.*)$
+RewriteRule ^(.*)$ http://thinkphp.ro/apps/php-hacks/last.fm.tracks/$1 [R=301,L]
+
+# remove php extension
+RewriteRule ^(.*)/$ /$1.php [L]

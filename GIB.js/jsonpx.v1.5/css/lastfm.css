@@ -1,0 +1,57 @@
+h2.heading a{   
+   border-top: 1px dotted #CCCCCC;
+    clear: both;
+    color: #D51007;
+    font-size: 18px;
+    line-height: 13px;
+    margin: 10px 10px 2px;
+    padding: 0;}
+#recentTracks table {
+    margin-bottom: 15px;
+}
+
+table.tracklist {
+    clear: both;
+    color: #696969;
+    font-size: 11px;
+    line-height: 1.18182em;
+    width: 100%;
+}
+master.css (line 8230)
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: 100%;
+}
+
+table.tracklist td.imageCell {
+    padding: 0;
+}
+
+table.tracklist td.imageSmall {
+    padding: 5px;
+    width: 34px;
+}
+
+table.tracklist th, table.tracklist td {
+    border-bottom: 1px solid #CCCCCC;
+    padding: 5px 10px;
+}
+
+table td.subjectCell a {
+    color: #1B1B1B;
+}
+table td.subjectCell a:hover {
+    color: #0187C5;
+}
+
+td.subjectCell div {
+    height: 1.36364em;
+    overflow: hidden;
+    width: 100%;
+}
+td.subjectCell p {float: right}
+table tr:hover {background: #ADC6E0;cursor: pointer}
+table {border-collapse: collapse; margin-bottom: 2em;}
+td, th {padding: 0.1em 1em;}
+

@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+   <title>Plugin last.fm based on YUI3</title>
+   <link rel="stylesheet" href="http://yui.yahooapis.com/2.8.0r4/build/reset-fonts-grids/reset-fonts-grids.css" type="text/css">
+   <link rel="stylesheet" href="http://yui.yahooapis.com/2.7.0/build/base/base.css" type="text/css">
+   <link rel="Stylesheet" href="page.css" type="text/css" />
+   <link rel="Stylesheet" href="lastfm.css" type="text/css" />
+   <script type="text/javascript" src="micro.js"></script>
+   <script type="text/javascript" charset="utf-8" src="http://yui.yahooapis.com/3.4.0/build/yui/yui-min.js"></script>
+   <script type="text/javascript" src="lastfm.min.js"></script>
+   <script type="text/javascript">
+
+    YUI().use("node", "basic-plugin", function(Y) {
+         Y.one("#container1").plug(Y.Widgets.Lastfm);
+         Y.one("#container2").plug(Y.Widgets.Lastfm);
+    });
+
+   </script>
+</head>
+<body class="yui-skin-sam">
+<div id="doc" class="yui-t7">
+   <div id="hd" role="banner"><h1><b>|</b>Plugin Last.fm <img src="logo.gif" /></h1></div>
+   <div id="bd" role="main">
+   <div class="yui-g">
+    <p class='recently'>Recently Listened Tracks</p>
+    <div class="yui-u first">
+
+       <div id="container1" class="thinkphp"></div>
+
+    </div>
+    <div class="yui-u">
+
+       <div id="container2" class="olivboy"></div>
+	
+    </div>
+<h4>How to User:</h4>
+<pre><code>
+
+YUI().use("node", "basic-plugin", function(Y) {
+     Y.one("#container1").plug(Y.Widgets.Lastfm);
+     Y.one("#container2").plug(Y.Widgets.Lastfm);
+});
+</code></pre>
+</div>
+
+	</div>
+   <div id="ft" role="contentinfo"><p>Created by @<a href="http://twitter.com/thinkphp">thinkphp</a></p></div>
+</div>
+</body>
+</html>

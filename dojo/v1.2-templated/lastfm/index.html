@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+   <title>Get Recent Tracks from Last.fm using Dijit</title>
+   <link rel="stylesheet" href="http://yui.yahooapis.com/2.8.0r4/build/reset-fonts-grids/reset-fonts-grids.css" type="text/css">
+   <link rel="stylesheet" href="http://yui.yahooapis.com/2.7.0/build/base/base.css" type="text/css">     
+   <link rel="Stylesheet" href="custom/widget/css/widget.css" type="text/css" />
+   <style type="text/css">
+    h1 {
+    color: #000000;
+    font-size: 30px;
+    font-weight: bold;
+    left: 0px;
+    letter-spacing: 5px;
+    margin-bottom: 0;
+    position: relative;}
+    #ft {    letter-spacing: 5px;}
+   </style>
+   <script type="text/javascript">
+
+           var dojoConfig = (function(){
+               var base = location.href.split("/");
+                   base.pop();
+                   base = base.join("/") 
+                   return {
+                        async: true,
+                        isDubug: true,
+                        packages: [{
+                             name: "custom",
+                             location: base + "/custom"  
+                        }]
+                   } 
+           }());  
+   </script>
+   <script src="http://ajax.googleapis.com/ajax/libs/dojo/1.7.1/dojo/dojo.js" data-dojo-config="async: true"></script>
+</head>
+<body class="yui-skin-sam">
+<div id="doc" class="yui-t7">
+   <div id="hd" role="banner"><h1>Recent Tracks</h1></div>
+   <div id="bd" role="main">
+    <div class="yui-u">
+
+       <div id="twitterbadge"></div>
+
+    </div>
+</div>
+   <div id="ft" role="contentinfo"><p>Created by @<a href="http://twitter.com/thinkphp">thinkphp</a></p></div>
+</div>
+
+   <script type="text/javascript">
+
+        require(["dojo/io/script","dojo/dom","dojo/_base/array","custom/widget"],function(jsonp,dom,util,Widget){
+
+             var container = dom.byId("twitterbadge"),
+                 jsonpArgs = {
+                  url: "http://ws.audioscrobbler.com/2.0/?method=user.getRecenttracks&format=json",
+                  callbackParamName: "callback",
+                  content: {
+                        user: "Yelf",
+                        api_key: 'b25b959554ed76058ac220b7b2e0a026',
+                        period: 30,
+                        limit: 5
+                  },
+                  load: function(data){
+                        var data = data.recenttracks.track;
+                        util.forEach(data, function(track){
+                            track = JSON.stringify(track);
+                            track = track.replace(/#text/gi,'text');
+                            track = JSON.parse(track);
+                            new Widget({name: track.artist.text,avatar: track.image[1].text,bio: track.name,date: track.date.text,url: track.url}).placeAt(container)
+                        });
+                  },
+                  error: function(error){
+                        container.innerHTML = "An unexpected error occurred: " + error;
+                  }
+             }
+             jsonp.get(jsonpArgs)
+        }); 
+
+   </script>
+</body>
+</html>
+

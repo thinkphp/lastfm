@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+   <title>Creating a Custom Widget</title>
+   <link rel="stylesheet" href="http://yui.yahooapis.com/2.8.0r4/build/reset-fonts-grids/reset-fonts-grids.css" type="text/css">
+   <link rel="stylesheet" href="http://yui.yahooapis.com/2.7.0/build/base/base.css" type="text/css">     
+   <link rel="Stylesheet" href="custom/widget/css/widget.css" type="text/css" />
+   <style type="text/css">
+    h1 {
+    color: #000000;
+    font-size: 40px;
+    font-weight: bold;
+    left: 0px;
+    letter-spacing: 5px;
+    margin-bottom: 0;
+    position: relative;}
+    #ft {    letter-spacing: 5px;}
+   </style>
+   <script type="text/javascript">
+
+           var dojoConfig = (function(){
+               var base = location.href.split("/");
+                   base.pop();
+                   base = base.join("/") 
+                   return {
+                        async: true,
+                        isDubug: true,
+                        packages: [{
+                             name: "custom",
+                             location: base + "/custom"  
+                        }]
+                   } 
+           }());  
+   </script>
+   <script src="http://ajax.googleapis.com/ajax/libs/dojo/1.7.1/dojo/dojo.js" data-dojo-config="async: true"></script>
+</head>
+<body class="yui-skin-sam">
+<div id="doc" class="yui-t7">
+   <div id="hd" role="banner"><h1>Creating a custom widget</h1></div>
+   <p>In this recipe, we'll be covering how to leverage pieces of Dojo and the Dijit framework to create your own custom widgets, specifically covering use of dijit/_widgetBase and dijit/_TemplatedMixin to quickly and easily set up your widget.</p>
+   <div id="bd" role="main">
+    <div class="yui-u">
+
+       <div id="widget"></div>
+
+    </div>
+</div>
+   <div id="ft" role="contentinfo"><p>Created by @<a href="http://twitter.com/thinkphp">thinkphp</a></p></div>
+</div>
+
+   <script type="text/javascript">
+
+        require(["dojo/_base/xhr","dojo/dom","dojo/_base/array","custom/widget"],function(xhr,dom,util,Widget){
+
+                var def = xhr.get({
+                    url: 'authors.json',
+                    handleAs: 'json'  
+                }) 
+                
+                def.then(function(authors){
+
+                    var container = dom.byId("widget");
+
+                    util.forEach(authors, function(author){
+
+                         //create our widget and place it
+                         new Widget(author).placeAt(container)  
+                    });
+ 
+                }); 
+        }); 
+
+   </script>
+</body>
+</html>
+

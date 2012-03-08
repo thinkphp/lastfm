@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+   <title>Last.fm Badge using YQL Open Data Table</title>
+   <link rel="stylesheet" type="text/css" href="lastfm.css" />
+   <style type="text/css">
+ h1,h2,h3,body { font-family:'gill sans','dejavu sans',verdana,sans-serif; }
+   h1 {
+      font-weight:bold;
+      font-size:35px;
+      letter-spacing: 2px;
+      color:#000;
+      margin-bottom:0;
+      position:relative;    
+    }
+    h1 b {
+      color:#ccc;
+      font-size: 40px
+    }
+   </style> 
+</head>
+<body>
+<h1><b>|</b>Last.fm Badge using YQL Open Data Table</h1>
+<div class="lastFM">
+<div class="lastFMHeader">Recent Tracks</div>
+<div id="result" class="lastFMBody recenttracks">Loading...</div>
+</div>
+   <script type="text/javascript">
+
+         function callback(data) {
+                  var out = unescape(data.results[0].replace('<result>','').replace('</result>','').replace(/&lt;/g,'<').replace(/&gt;/g,'>'));
+                  document.getElementById('result').innerHTML = out;
+         } 
+
+   </script>
+   <script type="text/javascript" src="http://query.yahooapis.com/v1/public/yql?q=use%20%22http%3A%2F%2Fthinkphp.ro%2Fapps%2Flastfm%2FYQL-open-data-table%2Frecentlastfm.xml%22%20as%20lastfm%3Bselect%20*%20from%20lastfm%20where%20username%3D%22olivboy%22%20and%20api_key%3D%222993c6e15c91a2890c2f11fa95673067%22&diagnostics=false&callback=callback&format=xml"></script>
+<div id="ft"><p>Created by <a href="http://thinkphp.ro/+">google+</a>| using <a href="http://thinkphp.ro/apps/lastfm.js/YQL-open-data-table/recentlastfm.xml">Open Data Table</a></p></div>
+</body>
+</html>

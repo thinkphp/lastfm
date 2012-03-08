@@ -1,0 +1,39 @@
+
+.lastfm {
+    background: #1D497A;
+    border:1px solid #10387D;
+    border-radius: 10px 10px 10px 10px;
+    width:300px;
+    padding:.5em;
+    margin:.5em;
+    font-family:arial,sans-serif; 
+    clear: both;
+    position: relative;
+}
+
+ul.lastfm {
+    font-size: 14px;
+    list-style: none outside none;
+}
+ul.lastfm li {
+    background: url("images/transpBlue.png") repeat scroll 0 0 transparent;
+    color: #7A8A99;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.lastfm li a{
+  font-size: 14px
+}
+.lastfm a{  
+  
+  color: #7A8A99;
+  text-decoration: none;
+}
+.lastfm li div{
+  color: #ddd;
+  font-size: 10px;  
+}
+.lastfm a:hover{
+ text-decoration: underline;
+}

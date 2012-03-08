@@ -1,0 +1,26 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+   <title>Plugin Last.fm MooTools</title>
+   <link type="text/css" rel="stylesheet" href="body.css" />
+   <script src="http://www.google.com/jsapi?key=ABQIAAAA1XbMiDxx_BTCY2_FkPh06RRaGTYH6UMl8mADNa0YKuWNNa8VNxQEerTAUcfkyrr6OwBovxn7TDAH5Q"></script>
+   <script type="text/javascript">google.load("mootools", "1.4");</script>
+   <script type="text/javascript" src="request.jsonp.js"></script>
+   <script type="text/javascript" src="lastfm.js"></script>
+</head>
+<body>
+<h1>Plugin Last.fm MooTools</h1>
+</h2>This plugin will get the Recent Tracks from a last.fm user and it produces structured HTML with in-buit CSS classes for styling</h2>
+<div id="result" class="lastFM"></div>
+<script type="text/javascript">
+new Lastfm('thinkphp','recenttracks','2993c6e15c91a2890c2f11fa95673067',{noimage: 'noimage.gif',imagesize:'medium',where:'result'});
+</script>
+<div id="topartists" class="lastFM"></div>
+<script type="text/javascript">
+new Lastfm('thinkphp','topartists','2993c6e15c91a2890c2f11fa95673067',{noimage: 'lastfm/noimage.gif',imagesize:'medium',css:false, where:'topartists'});
+</script>
+</body>
+</html>
+
+

@@ -1,0 +1,12 @@
+h1, h2, h3, body {    font-family: 'gill sans','dejavu sans',verdana,sans-serif;}
+.tweetBox{ background-color : #E9F4FE; border: 1px solid #ccc; overflow : auto; margin:3px; padding:3px; width: 590px}
+.tweetBox span a {color: #0187C5}
+.tweetBox a {color: #000;font-weight: bold;margin-left: 10px;text-decoration: none}
+.tweetBox a:hover{text-decoration: underline;}
+.tweetBox img {width: 64px;height: 64px;border: 0;border-radius:5px 5px 5px 5px}
+h1 {    color: #000000;    font-size: 30px;    font-weight: bold;    left: 0px;    letter-spacing: 5px;    margin-bottom: 0;    position: relative;}
+#period {margin-top: 10px}
+label {font-weight: bold}
+span.date {font-size: 11px}
+p label {font-size: 11px}
+#ft {margin-top: 20px}

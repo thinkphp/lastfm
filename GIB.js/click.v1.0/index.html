@@ -1,0 +1,16 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>A client-side dynamic lastfm widget with JavaScript</title>
+<link rel="stylesheet" type="text/css" href="css/lastfm.css" />
+<script type="text/javascript" src="lib/GIB-min.js"></script>
+<script type="text/javascript" src="lib/micro.js"></script>
+<script type="text/javascript" src="lastfm-min.js"></script>
+<script type="text/javascript">GIB.util.Event.domReady(function(){lastfm.init();});</script>
+</head>
+<body>
+<header><h1><img src="css/logo.png">Creating Client-Side Widget</h1></header>
+<section><a href="http://last.fm/user/olivboy" id="lastfm">Recently Played Tracks</a></section>
+<footer>Created by @<a href="http://twitter.com/thinkphp">thinkphp</a> | Using GIB.js</footer>
+</body>
+</html>

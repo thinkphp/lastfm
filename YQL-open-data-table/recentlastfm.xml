@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table xmlns="http://query.yahooapis.com/v1/schema/table.xsd">
+  <meta>
+    <sampleQuery>select * from lastfm where username="yelf" and api_key="2993c6e15c91a2890c2f11fa95673067"</sampleQuery>
+    <author>Adrian Statescu</author>
+    <documentationURL>http://thinkphp.ro/apps/lastfm.js/YQL-open-data-table/recentlastfm.xml</documentationURL>  
+    <description>http://thinkphp.ro/apps/lastfm.js/YQL-open-data-table/recentlastfm.xml</description>
+  </meta>
+
+  <bindings>
+    <select itemPath="" produces="XML">
+      <inputs>        
+      <key id='username' type='xs:string' paramType="variable" required='true' />
+      <key id='amount' type='xs:string' paramType="variable" required='false' />
+      <key id='api_key' type='xs:string' paramType="variable" required='true' />
+      </inputs>
+      <execute><![CDATA[
+
+         var amount = amount || 5;
+          
+         var endpoint = 'http://ws.audioscrobbler.com/2.0/?method=user.recenttracks&user='+ username +'&api_key='+ api_key +'&limit='+ amount +'&format=json';
+
+         resp = y.rest(endpoint).get().response;
+  
+         var doc = "<ul>";
+
+         var row = 'odd'; 
+
+         for each(var track in resp.track) {
+
+             var name = track.artist._text.toString();
+
+             var album = track.album._text.toString();
+
+             var url = track.url.toString();
+
+             var time = track.date._text.toString(); 
+
+             var src = track.image[1]._text.toString();             
+
+             if(src == "") src = "http://thinkphp.ro/apps/lastfm/mootools/jsonp2/noimage.gif";
+
+             var classRow = "itemRow " + row;
+             
+             doc += <li class={classRow}><a href={url} title={name}><img src={src} /></a><div class="itemName"><a href={url}>{name}</a></div><div class="itemArtist">{album}</div><div class="time">{time}</div></li>
+
+             if(row == 'odd') row = 'even';
+
+                          else 
+
+                              row = 'odd';
+         }  
+
+         doc += "</ul>"
+
+         response.object = doc
+      ]]></execute>
+    </select>
+
+  </bindings>
+</table>

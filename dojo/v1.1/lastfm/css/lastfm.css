@@ -1,0 +1,43 @@
+body { position: relative; width: 864px; margin: 0 auto; color: #000; font: 14px Helvetica, "Helvetica Neue", Arial, sans-serif; }
+:link { color: #a40106; text-decoration: none; }
+:visited { color: #ab3c3f; text-decoration: none; }
+:link:hover, :visited:hover,
+:link:focus, :visited:focus, 
+:link:active, :visited:active { color: #a40106; text-decoration: underline; }
+h1, h2, h3, body {  font-family: 'gill sans','dejavu sans',verdana,sans-serif;}
+#output {margin-left: 110px}
+h1 {
+      font-weight:bold;
+      font-size:35px;
+      letter-spacing: 7px;
+      color:#0187C5;
+      margin-bottom:0;
+}
+.tweetBox{ background-color : #fff; border: 1px solid #ccc; overflow : auto; margin:3px; padding:3px; width: 590px}
+.tweetBox span a {color: #0187C5}
+.tweetBox a {color: #000;font-weight: bold;margin-left: 10px;text-decoration: none}
+.tweetBox a:hover{text-decoration: underline;}
+.tweetBox img {width: 64px;height: 64px;border: 0;border-radius: 5px 5px 5px 5px}
+.tweetBox div {float: left;margin-top: 20px}
+.tweetBox img{float: left}
+.tweetBox div span {margin-left: 10px}
+
+#period {margin-top: 10px;margin-left: 110px}
+label {font-weight: bold}
+span.date {font-size: 11px}
+p label {font-size: 11px}
+#period{letter-spacing: 2px;font-weight: bold}
+#userDialog{
+    background: none repeat scroll 0 0 #69c;
+    color: #000;
+    padding: 5px;
+    width: 90%;
+    background: -moz-linear-gradient(19% 75% 90deg, #69c, #ccc) repeat scroll 0 0 transparent;
+    border: 1px solid #49c;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 0 -5px 300px #270644;
+    margin: 20px auto;
+    padding: 20px;
+}
+#ft {margin-top: 20px}
+#ft a {color: #0187C5}

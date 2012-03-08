@@ -1,0 +1,34 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html dir="ltr">
+<head>
+   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+   <title>Get Top Artists last.fm by username</title>
+   <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/dojo/1.6/dijit/themes/claro/claro.css"/>
+   <link rel="stylesheet" type="text/css" href="css/lastfm.css"/>
+   <script src="http://ajax.googleapis.com/ajax/libs/dojo/1.6/dojo/dojo.xd.js" djConfig="parseOnLoad: true,locale: 'en'"></script>
+   <script type="text/javascript" src="src/lastfm.min.js"></script>
+</head>
+<body class=" claro ">
+<img src="images/dojo.png"/ id="dojo">
+<h1>Get Top Artists <a href="#">last.fm</a> by username</h1>
+<div id="main" style="display:none"><!-- start main -->
+<button dojoType="dijit.form.Button" type="button" id="loadBtn">Click Me Dude!</button>
+<div id="period">Showing: Last 7 Days</div>
+<div id="userDialog" dojoType="dijit.Dialog" title="Enter a last.fm username">
+    Lastfm user: <input type="text" value="thinkphp" dojoType="dijit.form.ValidationTextBox" required="true" id="userTxt">
+    <p> <input id="mycheck" name="mycheck" dojoType="dijit.form.CheckBox" value="agreed"> <label for="mycheck">Recently Listened Tracks</label></p>
+
+    <p>
+       <input type="radio" id="radio1" value="7day" name="drink" checked/><label for="radio1">last 7 day</label>
+       <input type="radio" id="radio2" value="3month" name="drink"/><label for="radio2">last 3 months</label>
+       <input type="radio" id="radio3" value="6month" name="drink"/><label for="radio3">last 6 months</label>
+       <input type="radio" id="radio4" value="12month" name="drink"/><label for="radio4">last 12 months</label>
+       <input type="radio" id="radio5" value="overall" name="drink"/><label for="radio5">overall</label>
+    </p>
+    <button dojoType="dijit.form.Button" id="okBtn">Ok</button>    
+</div>
+<div id="output"></div>
+</div><!-- end main-->
+<div id="ft">Created by @<a href="http://twitter.com/thinkphp">thinkphp</a> </div>
+</body>
+</html>

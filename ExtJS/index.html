@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+   <title>Extending ExtJS with custom functions for DOM elements</title>
+   <link rel="stylesheet" href="http://yui.yahooapis.com/2.8.0r4/build/reset-fonts-grids/reset-fonts-grids.css" type="text/css">
+   <link rel="Stylesheet" href="page.css" type="text/css" />
+   <link rel="Stylesheet" href="lastfm.css" type="text/css" />
+   <script src="http://www.google.com/jsapi?key=ABQIAAAA1XbMiDxx_BTCY2_FkPh06RRaGTYH6UMl8mADNa0YKuWNNa8VNxQEerTAUcfkyrr6OwBovxn7TDAH5Q"></script>
+   <script type="text/javascript">google.load("ext-core", "3.1.0");</script>
+   <script type="text/javascript" src="lastfm.min.js"></script>
+   <script type="text/javascript">
+           Ext.onReady(function(){
+               Ext.get("result").lastfm('olivboy');
+               Ext.get("result2").lastfm('thinkphp');
+           });
+   </script>
+</head>
+<body class="yui-skin-sam">
+<div id="doc" class="yui-t7">
+   <div id="hd" role="banner"><h1 id="logo"><a href="index.html"><img src="images/extjs.jpg"></a></h1></div>
+   <div id="bd" role="main">
+	<div class="yui-g">
+    <div class="yui-u first">
+       <a href="#" class="recently">olivboy's Recently Listened Tracks</a> 
+       <div id="result"></div>
+
+
+    </div>
+    <div class="yui-u">
+       <a href="#" class="recently">thinkphp's Recently Listened Tracks</a> 
+       <div id="result2"></div>
+
+
+    </div>
+</div>
+
+	</div>
+
+<h4>How to Use</h4>
+<pre><code>
+Ext.onReady(function(){
+    Ext.get("result").lastfm('olivboy');
+    Ext.get("result2").lastfm('thinkphp');
+});
+</code></pre>
+
+   <div id="ft" role="contentinfo"><p>Created by @<a href="http://twitter.com/thinkphp">thinkphp</a></p></div>
+</div>
+</body>
+</html>

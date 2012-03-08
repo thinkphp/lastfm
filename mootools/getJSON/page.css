@@ -1,0 +1,42 @@
+h1 {
+    color: #000000;
+    font-size: 54px;
+    font-weight: bold;
+    left: -50px;
+    letter-spacing: -5px;
+    margin-bottom: 0;
+    position: relative;
+}
+
+h1 b {
+    color: #CCCCCC;
+}
+pre {
+    clear: both;
+    color: #666666;
+    margin-left: 10px;
+}
+code {
+    font-size: 2.3em;
+}
+ pre,code, h1 {
+    font-family: menlo,'dejavu sans mono',monospace;
+}
+h4 {
+    clear: both;
+    color: #111111;
+    font-size: 30px;
+    margin-bottom: 0;
+}
+
+p.recently{
+border-top: 1px dotted #CCCCCC;
+    clear: both;
+    color: #D51007;
+    font-size: 18px;
+    line-height: 13px;
+    margin: 1px -15px 2px;
+    padding: 0;
+}
+
+#ft a {font-size: 15px;letter-spacing: 1px;color: #69c}

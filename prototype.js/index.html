@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+   <title>Plugin last.fm based on Prototype.js</title>
+   <link rel="stylesheet" href="http://yui.yahooapis.com/2.8.0r4/build/reset-fonts-grids/reset-fonts-grids.css" type="text/css">
+   <link rel="stylesheet" href="http://yui.yahooapis.com/2.7.0/build/base/base.css" type="text/css">
+   <link rel="Stylesheet" href="page.css" type="text/css" />
+   <link rel="Stylesheet" href="lastfm.css" type="text/css" />
+   <script src="http://www.google.com/jsapi?key=ABQIAAAA1XbMiDxx_BTCY2_FkPh06RRaGTYH6UMl8mADNa0YKuWNNa8VNxQEerTAUcfkyrr6OwBovxn7TDAH5Q"></script>
+   <script type="text/javascript">google.load("prototype", "1.7.0");</script>
+   <script type="text/javascript" src="lastfm.min.js"></script>
+   <script type="text/javascript">
+
+document.observe("dom:loaded", function() {
+        $('container1').lastfm({username: 'olivboy'});
+        $('container2').lastfm({username: 'thinkphp'});
+});
+
+   </script>
+</head>
+<body class="yui-skin-sam">
+<div id="doc2" class="yui-t7">
+   <div id="hd" role="banner"><h1><b>|</b>Plugin Last.fm based on <img src="logo.gif"></h1></div>
+   <div id="bd" role="main">
+   <div class="yui-g">
+    <p class='recently'>Recently Listened Tracks</p>
+    <div class="yui-u first">
+
+       <div id="container1"></div>
+
+    </div>
+    <div class="yui-u">
+
+       <div id="container2"></div>
+	
+    </div>
+<h4>How to Use:</h4>
+<pre><code>
+document.observe("dom:loaded", function() {
+     $('container1').lastfm({username: 'olivboy'});
+     $('container2').lastfm({username: 'thinkphp'});
+});
+</code></pre>
+</div>
+
+	</div>
+   <div id="ft" role="contentinfo"><p>Created by @<a href="http://twitter.com/thinkphp">thinkphp</a></p></div>
+</div>
+</body>
+</html>

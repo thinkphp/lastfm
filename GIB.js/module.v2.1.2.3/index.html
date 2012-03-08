@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+   <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+   <title>last.fm</title>
+   <script type="text/javascript" src="lib/GIB-min.js"></script>
+   <script type="text/javascript" src="lib/micro.js"></script>
+   <script type="text/javascript" src="lib/EventManager.js"></script>
+   <script type="text/javascript" src="src/lastfm.js"></script>
+   <link rel="stylesheet" href="http://yui.yahooapis.com/2.7.0/build/reset-fonts-grids/reset-fonts-grids.css" type="text/css"/>
+   <link rel="stylesheet" href="http://yui.yahooapis.com/2.7.0/build/base/base.css" type="text/css"/>
+   <link rel="stylesheet" href="css/last.fm.css" type="text/css"/>
+   <script type="text/javascript">
+
+           GIB.util.Event.domReady(function(){
+                    lastfm.init({onRequest: function(){
+                                   $('result').innerHTML = "<span class='loading'>Loading...</span>";
+                                },
+                                onSuccess: function() {
+                                   $('result').innerHTML = "";
+                                },
+                                username: 'olivboy'
+                    });
+           });
+
+   </script>
+</head>
+<body>
+<div id="doc" class="yui-t7">
+   <div id="hd" role="banner"><h1><img src="css/logo.jpg"/></h1></div>
+
+   <div id="bd" role="main">
+	<div class="yui-g">
+         <div id="result"></div>
+	</div>
+	</div>
+<div id="ft"><p>Created by @<a href="http://twitter.com/thinkphp">thinkphp</a> using <a href="">GIB.js</a></p></div>
+
+</div>
+</body>
+</html>
