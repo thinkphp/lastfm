@@ -19,6 +19,8 @@ JavaScript Frameworks:
 - Yahoo User Interface
 - Prototype.js
 
+other language:
+
 - Python Programming Language
 - PHP: Hypertext Preprocessor
 - YQL Open Data Table
