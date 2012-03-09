@@ -1,6 +1,6 @@
-## lastfm
+## Lastfm
 
-#### A common application for popular JavaScript Frameworks and PHP/Python/Chrome Extension/YQL
+#### A common application for popular JavaScript Frameworks and PHP/Python/Chrome Extension/YQL Open Data Table
 
 ## Introduction
 
@@ -19,12 +19,12 @@ JavaScript Frameworks:
 - Prototype.js
 - GIB.js (my micro-library)
 
-other languages:
+Other Programming Languages:
 
 - Python Programming Language
 - PHP: Hypertext Preprocessor
 
-toys:
+Toys:
 
 - YQL Open Data Table
 - Chrome Extension
