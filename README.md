@@ -15,14 +15,17 @@ JavaScript Frameworks:
 - MooTools
 - Dojo (AMD Style)
 - ExtJS
-- GIB.js
 - Yahoo User Interface
 - Prototype.js
+- GIB.js (my micro-library)
 
 other languages:
 
 - Python Programming Language
 - PHP: Hypertext Preprocessor
+
+toys:
+
 - YQL Open Data Table
 - Chrome Extension
 
