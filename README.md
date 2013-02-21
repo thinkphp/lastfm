@@ -15,9 +15,11 @@ JavaScript Frameworks:
 - MooTools
 - Dojo (AMD Style)
 - ExtJS
-- Yahoo User Interface
+- Yahoo! User Interface (YUI2 and YUI3)
 - Prototype.js
 - GIB.js (my micro-library)
+- cuba.js (micro-library)
+- cui     (Cuba User Interface Library in Modules)
 
 Other Programming Languages:
 
