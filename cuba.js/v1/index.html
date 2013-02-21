@@ -49,13 +49,13 @@ cuba.ready(function(){
                            onRequest: function(data){
                                 $('container').innerHTML = "<span class='loading'>Loading...</span>";
                            }
-         });
+         }).get();
 
          new LastFM({username: 'voidberg', where: 'container2', 
                             onRequest: function(data){
                                 $('container2').innerHTML = "<span class='loading'>Loading...</span>";
                             }
-         });    
+         }).get();    
 });
 </code></pre>
 
