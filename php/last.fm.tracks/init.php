@@ -1,6 +1,6 @@
 <?php
 
-require_once('config.php');
+require_once('config.thinkphp.php');
 
 $db = mysql_connect(DB_HOST, DB_USER, DB_PASS) or die("Cannot connect to database. Check your configuration. MySQL says: " . mysql_error());
 
