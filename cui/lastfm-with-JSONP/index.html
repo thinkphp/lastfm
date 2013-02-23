@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+   <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+   <title>Plugin last.fm on cui.jsonp</title>
+   <link rel="stylesheet" href="http://yui.yahooapis.com/2.7.0/build/reset-fonts-grids/reset-fonts-grids.css" type="text/css"/>
+   <link rel="stylesheet" href="http://yui.yahooapis.com/2.7.0/build/base/base.css" type="text/css"/>
+   <link rel="stylesheet" href="css/lastfm.css" type="text/css"/>
+   <link rel="stylesheet" href="css/last.fm.css" type="text/css"/>
+   <script type="text/javascript" src="../src/core/cui.js"></script>
+   <script type="text/javascript" src="../src/core/ready.js"></script>
+   <script type="text/javascript" src="../src/core/dom.js"></script>
+   <script type="text/javascript" src="../src/core/event.js"></script>
+   <script type="text/javascript" src="../src/core/customevent.js"></script>
+   <script type="text/javascript" src="../src/core/template.js"></script>
+   <script type="text/javascript" src="../src/core/jsonp.js"></script>
+   <script type="text/javascript" src="lastfm.js"></script>
+   <script type="text/javascript">
+
+cui.ready(function(){
+
+         new LastFM({username: 'olivboy', where: 'container',
+                           onRequest: function(data){
+                                $('#container').innerHTML = "<span class='loading'>Loading...</span>";
+                           }
+         }).get();
+
+         new LastFM({username: 'voidberg', where: 'container2', 
+                            onRequest: function(data){
+                                $('#container2').innerHTML = "<span class='loading'>Loading...</span>";
+                            }
+         }).get();    
+});
+
+   </script>
+</head>
+<body>
+
+<body class="yui-skin-sam">
+<div id="doc" class="yui-t7">
+   <div id="hd" role="banner"><h1>Last.fm based on cui.jsonp</h1></div>
+   <div id="bd" role="main">
+	<div class="yui-g">
+       <div class="yui-u first">
+            <div id="container"></div> 
+       </div>
+       <div class="yui-u">
+            <div id="container2"></div> 
+       </div>
+<h4>How to use:</h4>
+<pre><code>
+cui.ready(function(){
+
+         new LastFM({username: 'olivboy', where: 'container',
+                           onRequest: function(data){
+                                $('#container').innerHTML = "<span class='loading'>Loading...</span>";
+                           }
+         }).get();
+
+         new LastFM({username: 'voidberg', where: 'container2', 
+                            onRequest: function(data){
+                                $('#container2').innerHTML = "<span class='loading'>Loading...</span>";
+                            }
+         }).get();    
+});
+</code></pre>
+
+</div>
+
+	</div>
+<div id="ft"><p>Created by @<a href="http://twitter.com/thinkphp">thinkphp</a> using <a href="http://github.com/thinkphp/cuba.js">cuba.js</a></p></div>
+</div>
+</body>
+</html>
