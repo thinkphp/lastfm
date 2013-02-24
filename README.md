@@ -15,7 +15,8 @@ JavaScript Frameworks:
 - MooTools
 - Dojo (AMD Style)
 - ExtJS
-- Yahoo! User Interface (YUI2 and YUI3)
+- YUI2
+- YUI3
 - Prototype.js
 - GIB.js (my micro-library)
 - cuba.js (micro-library)
@@ -30,6 +31,7 @@ Toys:
 
 - YQL Open Data Table
 - Chrome Extension
+- Google App Engine
 
 
 
