@@ -1,0 +1,14 @@
+application: mylastfm2
+version: 1
+api_version: 1
+runtime: python27
+threadsafe: no
+
+handlers:
+
+- url: /css
+  static_dir: css
+
+- url: .*
+  script: main.py
+
